@@ -5,6 +5,7 @@ let validChoices = ["rock", "paper", "scissors"];
 let j = 1;
 let w = 0;
 let l = 0;
+
 // get a random string from array
 
 function getRandom(stringArray) {
@@ -43,16 +44,21 @@ function calc(){
 
 function ask(){
     do {
-        i = prompt("Welcome to Rock, Paper, and Scissors. Round " + j + " Please enter your play (rock, paper, or scissors): ");
+        i = prompt("Welcome to Rock, Paper, and Scissors. Round " + j + ": Please enter your play (rock, paper, or scissors): ");
         result = i.toLowerCase();
     } while (!validChoices.includes(result));
 }
+
+// round loop
 
 for(j = 1; j < 6; j++)
 {
     console.log("round " + j);
     round();
 }
+
+// total score
+
 if (l > w){
     console.log("You LOST the game");
 }
@@ -62,7 +68,3 @@ else if (w > l){
 else {
     console.log("TIE")
 }
-
-
-
-
