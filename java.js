@@ -2,7 +2,7 @@ let result;
 let i;
 let h;
 let validChoices = ["rock", "paper", "scissors"];
-let j;
+let j = 1;
 let w = 0;
 let l = 0;
 // get a random string from array
@@ -43,21 +43,21 @@ function calc(){
 
 function ask(){
     do {
-        i = prompt("Welcome to Rock, Paper, and Scissors. Please enter your play (rock, paper, or scissors): ");
+        i = prompt("Welcome to Rock, Paper, and Scissors. Round " + j + " Please enter your play (rock, paper, or scissors): ");
         result = i.toLowerCase();
     } while (!validChoices.includes(result));
 }
 
-for(j = 0; j < 5; j++)
+for(j = 1; j < 6; j++)
 {
-    console.log("round " + (j + 1));
+    console.log("round " + j);
     round();
 }
 if (l > w){
-    console.log("You Lost the game");
+    console.log("You LOST the game");
 }
 else if (w > l){
-    console.log("You Won the game")
+    console.log("You WON the game")
 }
 else {
     console.log("TIE")
